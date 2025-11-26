@@ -7,7 +7,7 @@ const About: React.FC = () => {
         <div className="flex flex-col md:flex-row gap-12 items-center">
           
           <div className="w-full md:w-1/2 aspect-square relative grayscale contrast-125">
-             {/* Placeholder for creator image - using a sharp architectural or abstract image to fit theme if real face not desired, but prompt says creator */}
+          
              <img 
                src="https://picsum.photos/800/800?grayscale" 
                alt="The Creator" 

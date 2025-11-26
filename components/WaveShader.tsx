@@ -2,20 +2,30 @@ import React, { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      instancedMesh: any;
+      circleGeometry: any;
+      meshBasicMaterial: any;
+    }
+  }
+}
+
 const ParticleWave = () => {
   const mesh = useRef<THREE.InstancedMesh>(null);
   
-  // Dummy object for calculating transforms
+
   const dummy = useMemo(() => new THREE.Object3D(), []);
   
-  // Grid parameters
+
   const rows = 50;
   const cols = 40;
   const separation = 0.5;
 
-  // Initialize positions
+
   const particles = useMemo(() => {
-    const temp: { x: number; z: number; y: number }[] = [];
+    const temp = [];
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
         const x = (i - rows / 2) * separation;
@@ -34,8 +44,7 @@ const ParticleWave = () => {
     particles.forEach((particle, i) => {
       const { x, z } = particle;
       
-      // Wave Calculation
-      // Combine multiple sine waves for a more organic "liquid" feel
+      
       const y = 
         Math.sin(x * 0.5 + time * 0.5) * 0.5 + 
         Math.sin(z * 0.3 + time * 0.3) * 0.5 + 
@@ -43,7 +52,7 @@ const ParticleWave = () => {
 
       dummy.position.set(x, y, z);
       
-      // Scale particles based on height for depth effect
+
       const scale = (y + 1.5) * 0.03; 
       dummy.scale.set(scale, scale, scale);
       

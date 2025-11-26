@@ -6,12 +6,12 @@ import WaveShader from './WaveShader';
 const Hero: React.FC = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-gray-50 flex items-center justify-center">
-      {/* Background Shader */}
+      
       <div className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none">
         <WaveShader />
       </div>
 
-      {/* Content Container */}
+      
       <div className="relative z-10 w-full max-w-5xl px-6 md:px-12 mx-auto flex flex-col items-start justify-center h-full">
         
         <motion.div 
@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
         </motion.div>
       </div>
 
-      {/* Decorative Elements */}
+    
       <div className="absolute bottom-12 left-6 md:left-12 text-xs font-mono uppercase tracking-widest opacity-50 hidden md:block">
         [ Lat: 28.5355° N ] [ Lon: 77.3910° E]
       </div>
