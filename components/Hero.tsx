@@ -1,14 +1,41 @@
 import React from 'react';
 import { ArrowDownRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import WaveShader from './WaveShader';
 
 const Hero: React.FC = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden bg-gray-50 flex items-center justify-center">
       
-      <div className="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none">
-        <WaveShader />
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black/[0.02] via-transparent to-black/[0.02]"></div>
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            background: `
+              radial-gradient(circle at 20% 50%, rgba(0,0,0,0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(0,0,0,0.03) 0%, transparent 50%),
+              radial-gradient(circle at 40% 20%, rgba(0,0,0,0.02) 0%, transparent 50%)
+            `,
+            animation: 'float 20s ease-in-out infinite alternate'
+          }}
+        ></div>
+        <style>{`
+          @keyframes float {
+            0% { 
+              transform: translate(0, 0) scale(1);
+              opacity: 0.3;
+            }
+            50% {
+              transform: translate(2%, 2%) scale(1.05);
+              opacity: 0.4;
+            }
+            100% { 
+              transform: translate(-2%, -2%) scale(1);
+              opacity: 0.3;
+            }
+          }
+        `}</style>
       </div>
 
       
