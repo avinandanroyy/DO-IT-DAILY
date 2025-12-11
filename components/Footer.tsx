@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
               <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                do-it-daily
+                Do-It-Daily
               </span>
               <span className="text-gray-400">.</span>
             </motion.div>
