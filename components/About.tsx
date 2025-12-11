@@ -42,16 +42,11 @@ const About: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="w-full md:w-1/2"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full text-sm font-medium text-purple-700 mb-6">
-              <span>About</span>
-            </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6">
-              <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Why I Built
-              </span>
+              <span>Why I Built This</span>
               <br />
-              <span className="text-gray-900">This</span>
+              
             </h2>
             
             <div className="space-y-4 text-lg text-gray-700">
@@ -60,7 +55,7 @@ const About: React.FC = () => {
               </p>
               <p>
                 <span className="font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                  do-it-daily
+                  Do-It-Daily
                 </span> isn't just an app. It's the digital environment I built to force myself to succeed. It's sharp, unforgiving, and effective. I built it for myself, but you can use it too.
               </p>
             </div>

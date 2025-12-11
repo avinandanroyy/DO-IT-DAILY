@@ -93,7 +93,7 @@ const Features: React.FC = () => {
           className="mb-16 text-center"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600">
+            <span className="from-purple-600 via-blue-600 to-cyan-600">
               Systematic
             </span>
             <br />

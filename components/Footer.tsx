@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-gray-500">
-            © {new Date().getFullYear()} do-it-daily. All rights reserved.
+            © {new Date().getFullYear()} Do-It-Daily. All rights reserved.
           </div>
           <div className="flex gap-6 text-sm text-gray-500">
             <a href="#" className="hover:text-purple-600 transition-colors">Privacy</a>

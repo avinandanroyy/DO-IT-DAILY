@@ -61,7 +61,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="block bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent"
             >
-              Daily.
+              Daily
             </motion.span>
           </h1>
         </motion.div>
