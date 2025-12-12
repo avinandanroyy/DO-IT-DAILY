@@ -22,11 +22,7 @@ const tiers: PricingTier[] = [
 
 const Pricing: React.FC = () => {
   return (
-    <section id="pricing" className="w-full py-24 bg-gradient-to-b from-white to-purple-50/30">
-      {/* Background decorations */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-purple-200/20" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-200/20" />
-      
+    <section id="pricing" className="w-full py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Header */}
         <motion.div
@@ -36,18 +32,18 @@ const Pricing: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full text-sm font-medium text-purple-700 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black border border-yellow-400 rounded-full text-sm font-medium text-yellow-400 mb-6">
             <Sparkles className="w-4 h-4" />
             <span>Simple, transparent pricing</span>
           </div>
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">
+            <span className="text-yellow-400">
               Skin in
             </span>
             <br />
-            <span className="text-gray-900">the Game</span>
+            <span className="text-white">the Game</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             We charge money because if you don't pay, you won't pay attention. 
             The investment is part of the commitment mechanism.
           </p>
@@ -65,8 +61,8 @@ const Pricing: React.FC = () => {
               whileHover={{ y: -8, scale: 1.02 }}
               className={`relative rounded-2xl p-8 border-2 transition-all duration-300 ${
                 tier.isPopular
-                  ? 'bg-gradient-to-br from-purple-600 to-blue-600 text-white border-transparent shadow-2xl shadow-purple-500/50'
-                  : 'bg-white text-gray-900 border-gray-200 hover:border-purple-300 hover:shadow-xl'
+                  ? 'bg-yellow-400 text-black border-yellow-400 shadow-2xl shadow-yellow-400/50'
+                  : 'bg-black text-white border-yellow-400/20 hover:border-yellow-400'
               }`}
             >
               {/* Popular badge */}
@@ -77,7 +73,7 @@ const Pricing: React.FC = () => {
                   transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
                   className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                 >
-                  <div className="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
+                  <div className="bg-black text-yellow-400 border border-yellow-400 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg">
                     Most Popular
                   </div>
                 </motion.div>
@@ -92,7 +88,7 @@ const Pricing: React.FC = () => {
                   </div>
                 </div>
                 
-                <p className={`text-base mb-8 ${tier.isPopular ? 'text-white/90' : 'text-gray-600'}`}>
+                <p className={`text-base mb-8 ${tier.isPopular ? 'text-black/80' : 'text-gray-300'}`}>
                   {tier.description}
                 </p>
                 
@@ -108,14 +104,14 @@ const Pricing: React.FC = () => {
                     >
                       <motion.div
                         className={`mt-0.5 shrink-0 ${
-                          tier.isPopular ? 'text-white' : 'text-purple-600'
+                          tier.isPopular ? 'text-black' : 'text-yellow-400'
                         }`}
                         whileHover={{ scale: 1.2, rotate: 360 }}
                         transition={{ duration: 0.3 }}
                       >
                         <Check className="w-5 h-5" />
                       </motion.div>
-                      <span className="text-sm">{feat}</span>
+                      <span className={`text-sm ${tier.isPopular ? 'text-black' : 'text-gray-300'}`}>{feat}</span>
                     </motion.li>
                   ))}
                 </ul>
@@ -125,18 +121,13 @@ const Pricing: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   className={`w-full py-4 rounded-xl font-bold text-lg transition-all duration-300 ${
                     tier.isPopular
-                      ? 'bg-white text-purple-600 hover:bg-gray-100 shadow-lg'
-                      : 'bg-gradient-to-r from-purple-600 to-blue-600 text-white hover:from-purple-700 hover:to-blue-700 shadow-lg shadow-purple-500/50'
+                      ? 'bg-black text-yellow-400 border border-yellow-400 hover:bg-yellow-400 hover:text-black shadow-lg'
+                      : 'bg-yellow-400 text-black hover:bg-yellow-300 shadow-lg shadow-yellow-400/50'
                   }`}
                 >
                   {tier.isPopular ? 'Get Started' : 'Select Plan'}
                 </motion.button>
               </div>
-
-              {/* Decorative gradient */}
-              {!tier.isPopular && (
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-blue-50 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-2xl -z-10" />
-              )}
             </motion.div>
           ))}
         </div>
@@ -149,9 +140,9 @@ const Pricing: React.FC = () => {
           transition={{ delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-gray-200 shadow-sm">
-            <Check className="w-5 h-5 text-green-500" />
-            <span className="text-sm font-medium text-gray-700">
+          <div className="inline-flex items-center gap-2 px-6 py-3 bg-black rounded-full border border-yellow-400 shadow-sm">
+            <Check className="w-5 h-5 text-yellow-400" />
+            <span className="text-sm font-medium text-white">
               30-Day Money Back Guarantee
             </span>
           </div>
