@@ -79,10 +79,7 @@ const Features: React.FC = () => {
   };
 
   return (
-    <section className="w-full py-24 bg-white">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-50/30" />
-      
+    <section className="w-full py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
         {/* Header */}
         <motion.div
@@ -93,13 +90,13 @@ const Features: React.FC = () => {
           className="mb-16 text-center"
         >
           <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
-            <span className="from-purple-600 via-blue-600 to-cyan-600">
+            <span className="text-yellow-400">
               Systematic
             </span>
             <br />
-            <span className="text-gray-900">Excellence</span>
+            <span className="text-white">Excellence</span>
           </h2>
-          <p className="text-xl text-gray-600">
+          <p className="text-xl text-gray-300">
             Everything you need to build unbreakable habits and maintain consistency
           </p>
         </motion.div>
@@ -117,14 +114,11 @@ const Features: React.FC = () => {
               key={feature.id}
               variants={itemVariants}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-transparent hover:shadow-2xl transition-all duration-300 overflow-hidden"
+              className="group relative bg-black rounded-2xl p-8 border border-yellow-400/20 hover:border-yellow-400 transition-all duration-300 overflow-hidden"
             >
-              {/* Gradient background on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-              
               {/* Icon */}
               <motion.div
-                className={`mb-6 w-16 h-16 rounded-xl bg-gradient-to-br ${feature.gradient} p-4 text-white flex items-center justify-center shadow-lg`}
+                className="mb-6 w-16 h-16 rounded-xl bg-yellow-400 p-4 text-black flex items-center justify-center shadow-lg shadow-yellow-400/20"
                 whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                 transition={{ duration: 0.5 }}
               >
@@ -132,16 +126,16 @@ const Features: React.FC = () => {
               </motion.div>
 
               {/* Content */}
-              <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-blue-600 transition-all duration-300">
+              <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-all duration-300">
                 {feature.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-gray-300">
                 {feature.description}
               </p>
 
               {/* Learn more link */}
               <motion.div
-                className="flex items-center gap-2 text-sm font-semibold text-gray-400 group-hover:text-purple-600 transition-colors"
+                className="flex items-center gap-2 text-sm font-semibold text-gray-400 group-hover:text-yellow-400 transition-colors"
                 whileHover={{ x: 5 }}
               >
                 <span>Learn more</span>
@@ -152,9 +146,6 @@ const Features: React.FC = () => {
                   →
                 </motion.span>
               </motion.div>
-
-              {/* Decorative element */}
-              <div className={`absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br ${feature.gradient} opacity-10 rounded-full blur-2xl group-hover:opacity-20 transition-opacity duration-300`} />
             </motion.div>
           ))}
         </motion.div>
