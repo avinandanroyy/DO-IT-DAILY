@@ -13,10 +13,10 @@ const Footer: React.FC = () => {
               className="text-2xl font-bold tracking-tighter mb-4 cursor-pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             >
-              <span className="text-white-400">
+              <span className="text-yellow-400">
                 Do It Daily
               </span>
-              <span className="text-gray-400">.</span>
+              
             </motion.div>
             <p className="text-gray-300">
               The anti-procrastination community. Master consistency through ruthless accountability and minimalist tracking.
