@@ -4,25 +4,7 @@ import { motion } from 'framer-motion';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-screen overflow-hidden bg-gradient-to-br from-purple-50 via-blue-50 to-cyan-50">
-      
-      {/* Animated gradient background */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div 
-          className="absolute inset-0 bg-gradient-to-br from-purple-200/20 via-blue-200/20 to-cyan-200/20"
-          animate={{
-            backgroundPosition: ['0% 0%', '100% 100%'],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            repeatType: 'reverse',
-          }}
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(120,119,198,0.1),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(59,130,246,0.1),transparent_50%)]" />
-      </div>
-
+    <section className="relative w-full min-h-screen overflow-hidden bg-black">
       {/* Main content */}
       <div className="relative z-10 w-full max-w-7xl px-6 md:px-12 mx-auto flex flex-col items-center justify-center min-h-screen py-24">
         
@@ -33,7 +15,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="mb-8"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-purple-200 rounded-full text-sm font-medium text-purple-700">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-black border border-yellow-400 rounded-full text-sm font-medium text-yellow-400">
             <Sparkles className="w-4 h-4" />
             <span>The anti-procrastination community</span>
           </div>
@@ -46,7 +28,7 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mb-8"
         >
-          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[1.1] text-gray-900">
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-[1.1] text-white">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -59,7 +41,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="block bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent"
+              className="block text-yellow-400"
             >
               Daily
             </motion.span>
@@ -73,10 +55,10 @@ const Hero: React.FC = () => {
           transition={{ delay: 0.6, duration: 0.8 }}
           className="text-center max-w-3xl mb-12"
         >
-          <p className="text-xl md:text-2xl text-gray-700">
+          <p className="text-xl md:text-2xl text-gray-300">
             Master consistency through ruthless accountability and minimalist tracking.
             <br />
-            <span className="text-gray-600">Real-time progress, real results.</span>
+            <span className="text-gray-400">Real-time progress, real results.</span>
           </p>
         </motion.div>
 
@@ -90,14 +72,14 @@ const Hero: React.FC = () => {
             <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="group relative overflow-hidden bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/60 transition-all duration-300"
+            className="group relative overflow-hidden bg-yellow-400 text-black px-8 py-4 rounded-full font-bold text-lg shadow-lg shadow-yellow-400/50 hover:shadow-xl hover:shadow-yellow-400/60 transition-all duration-300"
           >
             <span className="relative z-10 flex items-center gap-2">
               Start Your Streak
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </span>
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600"
+              className="absolute inset-0 bg-yellow-400"
               initial={{ x: '-100%' }}
               whileHover={{ x: 0 }}
               transition={{ duration: 0.3 }}
@@ -107,7 +89,7 @@ const Hero: React.FC = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-white/50 transition-all duration-300"
+            className="px-8 py-4 rounded-full font-semibold text-lg border-2 border-yellow-400/50 text-white hover:border-yellow-400 hover:bg-yellow-400/10 transition-all duration-300"
           >
             Learn More
           </motion.button>
@@ -125,33 +107,33 @@ const Hero: React.FC = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2"
+              className="text-4xl md:text-5xl font-bold text-white mb-2"
             >
               10k+
             </motion.div>
-            <div className="text-sm text-gray-600">Active Streaks</div>
+            <div className="text-sm text-gray-400">Active Streaks</div>
           </div>
           <div>
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.4, type: "spring", stiffness: 200 }}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2"
+              className="text-4xl md:text-5xl font-bold text-white mb-2"
             >
               500+
             </motion.div>
-            <div className="text-sm text-gray-600">Daily Habits</div>
+            <div className="text-sm text-gray-400">Daily Habits</div>
           </div>
           <div>
             <motion.div
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 1.6, type: "spring", stiffness: 200 }}
-              className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent mb-2"
+              className="text-4xl md:text-5xl font-bold text-white mb-2"
             >
               99%
             </motion.div>
-            <div className="text-sm text-gray-600">Success Rate</div>
+            <div className="text-sm text-gray-400">Success Rate</div>
           </div>
         </motion.div>
 

@@ -66,9 +66,9 @@ const Testimonials: React.FC = () => {
     <section className="w-full py-32 bg-black text-white overflow-hidden relative">
       <div className="max-w-5xl mx-auto px-6 md:px-12 mb-12 flex items-end justify-between">
          <h2 className="text-4xl md:text-5xl font-bold uppercase tracking-tight">
-            Proof of <br/> Work
+            <span className="text-white">Proof of</span> <br/> <span className="text-yellow-400">Work</span>
           </h2>
-          <div className="hidden md:block text-xs font-mono uppercase tracking-widest opacity-60">
+          <div className="hidden md:block text-xs font-mono uppercase tracking-widest text-yellow-400 opacity-60">
             [ Community Feed ]
           </div>
       </div>
@@ -89,7 +89,7 @@ const Testimonials: React.FC = () => {
           {duplicatedTestimonials.map((t, index) => (
             <div
               key={`${t.id}-${index}`}
-              className="relative w-[350px] md:w-[450px] bg-neutral-900 border border-neutral-800 p-10 flex flex-col justify-between shrink-0 select-none hover:border-neutral-600 transition-colors duration-300"
+              className="relative w-[350px] md:w-[450px] bg-black border border-yellow-400/20 p-10 flex flex-col justify-between shrink-0 select-none hover:border-yellow-400/50 transition-colors duration-300"
             >
               <div className="mb-8">
                  <span className="text-6xl font-serif leading-none opacity-20">"</span>
